@@ -302,3 +302,95 @@ examples = (
 for c in sorted(df["cluster"].unique()):
     print(f"\n=== Cluster {c} (most confident) ===")
     print(examples[examples["cluster"] == c].head(10).to_string(index=False))
+
+
+# -----------------------------
+# EXPERIMENTAL ADDITIONS
+# -----------------------------
+
+# -----------------------------
+# Save full clustered player data
+# -----------------------------
+df.to_csv("players_clustered_gmm.csv", index=False)
+print("\nSaved players_clustered_gmm.csv")
+
+# -----------------------------
+# Team cluster summary
+# -----------------------------
+team_cluster_counts = (
+    df.groupby(["TEAM_ABBREVIATION", "cluster"])
+      .size()
+      .unstack(fill_value=0)
+)
+
+team_cluster_pct = team_cluster_counts.div(team_cluster_counts.sum(axis=1), axis=0)
+
+# -----------------------------
+# League average cluster profile
+# -----------------------------
+league_cluster_avg = team_cluster_pct.mean()
+
+print("\nLeague average cluster distribution:")
+print(league_cluster_avg.round(3))
+
+# -----------------------------
+# Team needs (cluster deficits)
+# -----------------------------
+team_needs = league_cluster_avg - team_cluster_pct
+
+print("\nTeam needs (positive = needs more of that cluster):")
+print(team_needs.round(3))
+
+team_needs.to_csv("team_needs.csv")
+league_cluster_avg.to_csv("league_cluster_average.csv", header=["avg_pct"])
+team_cluster_counts.to_csv("team_cluster_counts.csv")
+team_cluster_pct.to_csv("team_cluster_percentages.csv")
+
+print("\nTeam cluster counts:")
+print(team_cluster_counts)
+
+print("\nTeam cluster percentages:")
+print(team_cluster_pct.round(2))
+
+# -----------------------------
+# Player/Team Fit Scoring
+# -----------------------------
+def rank_players_for_team(team_name, top_n=10):
+    if team_name not in team_needs.index:
+        print(f"Team {team_name} not found.")
+        return
+    
+    needs = team_needs.loc[team_name].values
+    
+    prob_cols = [col for col in df.columns if col.startswith("p_cluster_")]
+    
+    player_probs = df[prob_cols].values
+    
+    # Add player quality component
+    impact = df["PTS"] + 0.7 * df["AST"] + 0.7 * df["REB"]
+    scores = player_probs.dot(needs) * (df["PTS"] + df["AST"] + df["REB"])
+    
+    df_copy = df.copy()
+    df_copy["fit_score"] = scores
+
+    # filter out players on same team
+    df_copy = df_copy[df_copy["TEAM_ABBREVIATION"] != team_name]
+    
+    # Sort by best fit
+    ranked = df_copy.sort_values("fit_score", ascending=False)
+    
+    print(f"\nTop {top_n} best fits for {team_name}:")
+    print(
+        ranked[
+            ["PLAYER_NAME", "TEAM_ABBREVIATION", "PTS", "AST", "REB", "cluster", "fit_score"]
+        ].head(top_n).to_string(index=False)
+    )
+    
+    return ranked.head(top_n)
+
+# -----------------------------
+# Run example team fits
+# -----------------------------
+rank_players_for_team("OKC")
+rank_players_for_team("LAL")
+rank_players_for_team("BKN")
