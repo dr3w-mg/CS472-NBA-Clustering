@@ -252,6 +252,21 @@ df["cluster_conf"] = proba.max(axis=1)
 for j in range(k_opt):
     df[f"p_cluster_{j}"] = proba[:, j]
 
+CLUSTER_NAMES = {
+    0: "Developmental Wings",
+    1: "Two-Way Forwards",
+    2: "Backup Facilitators",
+    3: "Hustle Bigs",
+    4: "Primary Ball Handlers",
+    5: "3-and-D Wings",
+    6: "Rim Runners",
+    7: "Secondary Scorers",
+    8: "Dominant Bigs",
+}
+
+# Add a human-readable label column right after cluster assignment
+df["cluster_name"] = df["cluster"].map(CLUSTER_NAMES)
+
 # -----------------------------
 # PCA for visualization
 # -----------------------------
@@ -270,7 +285,7 @@ for c in range(k_opt):
         df.loc[mask, "pc1"],
         df.loc[mask, "pc2"],
         alpha=alpha_vals,
-        label=f"Cluster {c}",
+        label=CLUSTER_NAMES[c],
     )
 
 plt.xlabel("PC1")
@@ -296,11 +311,12 @@ print(cluster_means.round(2))
 # Example: show most confident players in each cluster
 examples = (
     df.sort_values(["cluster", "cluster_conf"], ascending=[True, False])
-      [["PLAYER_NAME", "TEAM_ABBREVIATION", "MIN", "PTS", "AST", "REB", "cluster", "cluster_conf"]]
+    [["PLAYER_NAME", "TEAM_ABBREVIATION", "MIN", "PTS",
+        "AST", "REB", "cluster", "cluster_conf"]]
 )
 
 for c in sorted(df["cluster"].unique()):
-    print(f"\n=== Cluster {c} (most confident) ===")
+    print(f"\n=== Cluster {c} ({CLUSTER_NAMES[c]}) (most confident) ===")
     print(examples[examples["cluster"] == c].head(10).to_string(index=False))
 
 
@@ -323,7 +339,8 @@ team_cluster_counts = (
       .unstack(fill_value=0)
 )
 
-team_cluster_pct = team_cluster_counts.div(team_cluster_counts.sum(axis=1), axis=0)
+team_cluster_pct = team_cluster_counts.div(
+    team_cluster_counts.sum(axis=1), axis=0)
 
 # -----------------------------
 # League average cluster profile
@@ -331,6 +348,10 @@ team_cluster_pct = team_cluster_counts.div(team_cluster_counts.sum(axis=1), axis
 league_cluster_avg = team_cluster_pct.mean()
 
 print("\nLeague average cluster distribution:")
+print("This shows what percentage of a typical roster "
+      "belongs to each archetype.")
+print("e.g. 0.13 means ~13 percent of an average team's "
+      "players fall into that cluster.\n")
 print(league_cluster_avg.round(3))
 
 # -----------------------------
@@ -338,7 +359,12 @@ print(league_cluster_avg.round(3))
 # -----------------------------
 team_needs = league_cluster_avg - team_cluster_pct
 
-print("\nTeam needs (positive = needs more of that cluster):")
+print("\nTeam needs (positive = needs more of that cluster, "
+      "negative = already has too many):")
+print("Values near 0 mean the team is close to the league "
+      "average for that archetype.")
+print("Values are above +0.10 are meaningful deficits. "
+      "Values below -0.10 are memeaningful surpluses.\n")
 print(team_needs.round(3))
 
 team_needs.to_csv("team_needs.csv")
@@ -355,42 +381,81 @@ print(team_cluster_pct.round(2))
 # -----------------------------
 # Player/Team Fit Scoring
 # -----------------------------
+
+
 def rank_players_for_team(team_name, top_n=10):
     if team_name not in team_needs.index:
         print(f"Team {team_name} not found.")
         return
-    
+
     needs = team_needs.loc[team_name].values
-    
+
     prob_cols = [col for col in df.columns if col.startswith("p_cluster_")]
-    
+
     player_probs = df[prob_cols].values
-    
+
     # Add player quality component
     impact = df["PTS"] + 0.7 * df["AST"] + 0.7 * df["REB"]
     scores = player_probs.dot(needs) * (df["PTS"] + df["AST"] + df["REB"])
-    
+
     df_copy = df.copy()
     df_copy["fit_score"] = scores
 
     # filter out players on same team
     df_copy = df_copy[df_copy["TEAM_ABBREVIATION"] != team_name]
-    
+
     # Sort by best fit
     ranked = df_copy.sort_values("fit_score", ascending=False)
-    
+
     print(f"\nTop {top_n} best fits for {team_name}:")
     print(
+        "Fit score = how well a player fills this team's archetype gaps, weighted"
+        " their overall production. Higher is better. A score of ~5 is excellent;"
+        " ~2-3 is a solid role fit.\n"
+    )
+    print(
         ranked[
-            ["PLAYER_NAME", "TEAM_ABBREVIATION", "PTS", "AST", "REB", "cluster", "fit_score"]
+            ["PLAYER_NAME", "TEAM_ABBREVIATION", "PTS",
+                "AST", "REB", "cluster_name", "fit_score"]
         ].head(top_n).to_string(index=False)
     )
-    
+
     return ranked.head(top_n)
 
+
+def summarize_team(team_name):
+    if team_name not in team_needs.index:
+        print(f"Team {team_name} not found.")
+        return
+
+    needs = team_needs.loc[team_name]
+    counts = team_cluster_counts.loc[team_name]
+
+    print(f"\n=== {team_name} Roster Breakdown ===")
+    print(f"{'Archetype':<25} {'Players':>8} {'vs League Average':>14}")
+    print("-" * 52)
+
+    for cluster_id, name in CLUSTER_NAMES.items():
+        count = counts.get(cluster_id, 0)
+        need = needs.get(cluster_id, 0)
+
+        if need > 0.10:
+            note = f"   <- needs more (+{need:.2f})"
+        elif need < -0.10:
+            note = f"   <- surplus  ({need:.2f})"
+        else:
+            note = "      (balanced)"
+        print(f"{name:<25} {int(count):>8} {note}")
+
+
 # -----------------------------
-# Run example team fits
+# Run example team fits and summaries
 # -----------------------------
 rank_players_for_team("OKC")
 rank_players_for_team("LAL")
 rank_players_for_team("BKN")
+rank_players_for_team("PHX")
+summarize_team("OKC")
+summarize_team("LAL")
+summarize_team("BKN")
+summarize_team("PHX")
