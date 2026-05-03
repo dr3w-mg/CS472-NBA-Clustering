@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player Archetypes | NBA Clustering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-logo">NBA<span>Clustering</span></div>
+    <a href="index.html">Overview</a>
+    <a href="players.html" class="active">Players</a>
+    <a href="teams.html">Teams</a>
+  </nav>
+
+  <!-- header -->
+  <section class="hero" style="padding: 4rem 2rem 3.5rem;">
+    <div class="hero-inner">
+      <div class="hero-tag">Gaussian Mixture Model · k = 9</div>
+      <h1 style="font-size: clamp(2.5rem, 6vw, 5rem);">Player<br><em>Archetypes</em></h1>
+      <p class="hero-desc">
+        322 NBA players soft-assigned across 9 archetypes.
+      </p>
+    </div>
+  </section>
+
+  <main class="page">
+
+    <div class="section-label">All 9 Clusters</div>
+    <h2 class="section-title">Archetype Breakdown</h2>
+    <p class="section-sub" style="margin-bottom:2rem;">
+      Each card shows the cluster's defining
+      traits, key stat profile, and example players. Because we used a GMM, players may carry
+      meaningful probability across multiple clusters.
+    </p>
+
+    <div class="cluster-grid">
+
+      <!-- cluster 0 -->
+      <div class="card cluster-card" data-num="1">
+        <div class="cluster-header">
+          <div class="cluster-num"></div>
+          <div>
+            <div class="cluster-title">Developmental Wings</div>
+            <div class="cluster-sub">Low minute, low production young wings.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">Decent Minutes</span>
+          <span class="trait">Low-Mid PTS</span>
+          <span class="trait">Young (Age or Career)</span>
+          <span class="trait">SF & PF</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 7.9 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:27%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Playmaking</span>
+            <span>Cluster: 1.4 AST | League: 2.9 AST</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:52%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Defense</span>
+            <span>Cluster: 1.1 STOCKS | League: 1.4 STOCKS</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:74%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Hustle</span></div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:63%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Ryan Dunn</span>
+          <span class="player-pill">Javonte Green</span>
+          <span class="player-pill">Matas Buzelis</span>
+        </div>
+      </div>
+
+      <!-- cluster 1 -->
+      <div class="card cluster-card" data-num="2">
+        <div class="cluster-header">
+          <div class="cluster-num">2</div>
+          <div>
+            <div class="cluster-title">Two-Way Forwards</div>
+            <div class="cluster-sub">Versatile fowards who contribute on OFF & DEF.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">High OFF & DEF Rating</span>
+          <span class="trait">Hustle</span>
+          <span class="trait">On-Ball Defense</span>
+          <span class="trait">Shot Contester</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 15.3 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:67%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>OFF Rating</span>
+            <span>Cluster: 114.2 RTG | League: 112.2 RTG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:78%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>DEF Rating</span>
+            <span>Cluster: 111.2 RTG | League: 112.4 RTG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:49%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Defense</span>
+            <span>Cluster: 1.96 STOCKS | League: 1.4 STOCKS</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:86%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Dyson Daniels</span>
+          <span class="player-pill">Draymond Green</span>
+          <span class="player-pill">Pascal Siakam</span>
+        </div>
+      </div>
+
+      <!-- cluster 2 -->
+      <div class="card cluster-card" data-num="3">
+        <div class="cluster-header">
+          <div class="cluster-num">3</div>
+          <div>
+            <div class="cluster-title">Backup Facilitators</div>
+            <div class="cluster-sub">Backup guards and secondary playmakers.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">Quality Minutes</span>
+          <span class="trait">Bench Player</span>
+          <span class="trait">Ball Security</span>
+          <span class="trait">High 3pt Rate</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 7.8 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:25%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Playmaking</span>
+            <span>Cluster: 0.93 TOV | League: 1.5 TOV</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:88%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>3pt Rate</span>
+            <span>Cluster: 0.57 3pters | League: 0.42 3pters</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:86%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Made 3s</span>
+            <span>Cluster: 0.38 3pt% | League: 0.33 3pt%</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:71%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Kyle Lowry</span>
+          <span class="player-pill">Gabe Vincent</span>
+          <span class="player-pill">Tre Jones</span>
+        </div>
+      </div>
+
+      <!-- cluster 3 -->
+      <div class="card cluster-card" data-num="4">
+        <div class="cluster-header">
+          <div class="cluster-num">4</div>
+          <div>
+            <div class="cluster-title">Hustle Bigs</div>
+            <div class="cluster-sub">Interior big men who get dirty and hustle.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">Box Out Artist</span>
+          <span class="trait">Shot Contester</span>
+          <span class="trait">Team Player</span>
+          <span class="trait">Gritty</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 8.2 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:33%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Contested Shots</span>
+            <span>Cluster: 6 CPG | League: 1.8 CPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Screen Assists</span>
+            <span>Cluster: 2.1 SPG | League: 0.87 SPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:94%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Box Outs</span>
+            <span>Cluster: 1.3 BOPG | League: 0.67 BOPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width: 91%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Andre Drummond</span>
+          <span class="player-pill">Daniel Theis</span>
+          <span class="player-pill">Kevon Looney</span>
+        </div>
+      </div>
+
+      <!-- cluster 4 -->
+      <div class="card cluster-card" data-num="5">
+        <div class="cluster-header">
+          <div class="cluster-num">5</div>
+          <div>
+            <div class="cluster-title">Primary Ball Handlers</div>
+            <div class="cluster-sub">League superstars.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">Offensive Weapons</span>
+          <span class="trait">High Usage</span>
+          <span class="trait">Volume Shooter</span>
+          <span class="trait">ISO Scorer</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 22.8 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Playmaking</span>
+            <span>Cluster: 5.8 AST | League: 2.9 AST</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:95%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>FG Attempts</span>
+            <span>Cluster: 17.4 FGA | League: 9.7 FGA</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:93%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Usage Rate</span>
+            <span>Cluster: 0.27 USG | League: 0.19 USG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:94%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Anthony Edwards</span>
+          <span class="player-pill">Shai Gilgeous-Alexander</span>
+          <span class="player-pill">Jayson Tatum</span>
+        </div>
+      </div>
+
+      <!-- cluster 5 -->
+      <div class="card cluster-card" data-num="6">
+        <div class="cluster-header">
+          <div class="cluster-num">6</div>
+          <div>
+            <div class="cluster-title">3-and-D Wings</div>
+            <div class="cluster-sub">High 3pt rate and solid defenders.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">High 3P%</span>
+          <span class="trait">Highest NET Rating</span>
+          <span class="trait">Defender</span>
+          <span class="trait">Brick Wall</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 9.7 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:41%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>3PT Attempts</span>
+            <span>Cluster: 4.4 3PA | League: 4.0 3PA</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:67%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Net Rating</span>
+            <span>Cluster: 6.76 RTG | League: -0.19 RTG </span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Charges Drawn</span>
+            <span>Cluster: 0.06 CD | League: 0.04 CD</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:78%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Luguentz Dort</span>
+          <span class="player-pill">Alex Caruso</span>
+          <span class="player-pill">Max Strus</span>
+        </div>
+      </div>
+
+      <!-- cluster 6 -->
+      <div class="card cluster-card" data-num="7">
+        <div class="cluster-header">
+          <div class="cluster-num">7</div>
+          <div>
+            <div class="cluster-title">Rim Runners</div>
+            <div class="cluster-sub">Traditional shot-blocking centers.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">Low PTS</span>
+          <span class="trait">Defensive Anchor</span>
+          <span class="trait">Rebound Machine</span>
+          <span class="trait">Low Production</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 9.2 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:39%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Rebounding</span>
+            <span>Cluster: 7.1 RPG | League: 4.7 RPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Contested Shots</span>
+            <span>Cluster: 7.1 CS | League: 4.3 CS</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:95%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>FG Attemps</span>
+            <span>Cluster: 5.9 FGA | League: 9.7 FGA</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:23%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Rudy Gobert</span>
+          <span class="player-pill">Jalen Duren</span>
+          <span class="player-pill">Jarrett Allen</span>
+        </div>
+      </div>
+
+      <!-- cluster 7 -->
+      <div class="card cluster-card" data-num="8">
+        <div class="cluster-header">
+          <div class="cluster-num">8</div>
+          <div>
+            <div class="cluster-title">Seconday Scorers</div>
+            <div class="cluster-sub">Solid secondary contributors and shot creators.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">Balanced</span>
+          <span class="trait">Decent Defender</span>
+          <span class="trait">Good Usage</span>
+          <span class="trait">Shot Creator</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 14.1 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:64%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Playmaking</span>
+            <span>Cluster: 3.5 AST | League: 2.9 AST</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:60%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Steals</span>
+            <span>Cluster: 0.91 SPG | League: 0.88</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:58%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Usage Rate</span>
+            <span>Cluster: 0.22 USG | League: 0.19 USG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:69%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Klay Thompson</span>
+          <span class="player-pill">Stephon Castle</span>
+          <span class="player-pill">Ayo Dosunmu</span>
+        </div>
+      </div>
+
+      <!-- cluster 8 -->
+      <div class="card cluster-card" data-num="9">
+        <div class="cluster-header">
+          <div class="cluster-num">9</div>
+          <div>
+            <div class="cluster-title">Dominant Bigs</div>
+            <div class="cluster-sub">Elite big men who can score and rebound.</div>
+          </div>
+        </div>
+        <div class="cluster-traits">
+          <span class="trait">High Usage</span>
+          <span class="trait">Rebounder</span>
+          <span class="trait">Versatile</span>
+          <span class="trait">Do-It-All</span>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Scoring</span>
+            <span>Cluster: 20.2 PPG | League: 12.4 PPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:90%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Playmaking</span>
+            <span>Cluster: 4.3 AST | League: 2.9 AST</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill gold" style="width:79%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Rebounding</span>
+            <span>Cluster: 10.9 RPG | League: 4.7 RPG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label"><span>Usage Rate</span>
+            <span>Cluster: 0.24 USG | League: 0.19 USG</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill teal" style="width:90%"></div>
+          </div>
+        </div>
+        <div class="cluster-players">
+          <div class="cluster-players-label">Example Players</div>
+          <span class="player-pill">Nikola Jokić</span>
+          <span class="player-pill">Giannis Antetokounmpo</span>
+          <span class="player-pill">Victor Wembanyama</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- end cluster-grid -->
+
+    <hr class="divider" />
+
+    <p style="font-size:.83rem; color:var(--muted); text-align:center;">
+      Download the full dataset: <a href="/outputs/players_clustered_gmm.csv" download>players_clustered_gmm.csv</a>
+      and
+      the mean cluster data: <a href="/outputs/cluster_means_gmm.csv" download>cluster_means_gmm.csv</a>
+    </p>
+
+  </main>
+
+  <footer>
+    NAU CS472 · NBA Player Clustering · 2024-25 Season ·
+    <a href="https://github.com/dr3w-mg/CS472-NBA-Clustering" target="_blank">GitHub Repo ↗</a>
+  </footer>
+
+</body>
+
+</html>
