@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Profiles | NBA Clustering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-logo">NBA<span>Clustering</span></div>
+    <a href="index.html">Overview</a>
+    <a href="players.html">Players</a>
+    <a href="teams.html" class="active">Teams</a>
+  </nav>
+
+  <!-- header -->
+  <section class="hero" style="padding: 4rem 2rem 3.5rem;">
+    <div class="hero-inner">
+      <div class="hero-tag">30 Teams · Cluster Distribution · Roster Needs</div>
+      <h1 style="font-size: clamp(2.5rem, 6vw, 5rem);">Team<br><em>Profiles</em></h1>
+      <p class="hero-desc">
+        Each team's roster is mapped to a cluster distribution and compared against the
+        league average. Gaps in the distribution reveal roster needs, and players are
+        ranked by how well they fill those needs.
+      </p>
+    </div>
+  </section>
+
+  <main class="page">
+
+    <!-- team profile and needs breakdown -->
+    <div class="section-label">Methodology</div>
+    <h2 class="section-title">Building Team Profiles</h2>
+
+    <div class="team-intro">
+      <div class="card">
+        <h3 style="font-size:.9rem;font-weight:600;margin-bottom:.5rem;">Team Cluster Distribution</h3>
+        <p style="font-size:.83rem;color:var(--muted);margin-bottom:1rem;">
+          Each player's soft GMM probabilities are summed across the roster to produce a
+          normalized cluster distribution.
+        </p>
+        <p style="font-size:.83rem;color:var(--muted);margin-bottom:1rem;">
+          Here we can see that the OKC Thunder have surplus of 3-and-D players,
+          and have a deficit in a lot of other clusters. This was the year they won the
+          NBA championship, so clearly their roster works for them.
+        </p>
+
+        <!-- distribution bar -->
+        <div class="dist-bar">
+          <div class="dist-label">
+            <span>Example: OKC Thunder Archetype Distribution</span>
+          </div>
+          <div class="dist-track" style="height:12px;border-radius:4px;">
+            <div class="dist-seg" style="width:0%;background:#f97316;"></div>
+            <div class="dist-seg" style="width:8%;background:#fbbf24;"></div>
+            <div class="dist-seg" style="width:8%;background:#2dd4bf;"></div>
+            <div class="dist-seg" style="width:0%;background:#818cf8;"></div>
+            <div class="dist-seg" style="width:17%;background:#34d399;"></div>
+            <div class="dist-seg" style="width:59%;background:#f472b6;"></div>
+            <div class="dist-seg" style="width:0%;background:#60a5fa;"></div>
+            <div class="dist-seg" style="width:0%;background:#a78bfa;"></div>
+            <div class="dist-seg" style="width:8%;background:#fb923c;"></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.75rem;">
+          <span class="tag" style="background:rgba(249,115,22,.15);">C0</span>
+          <span class="tag" style="background:rgba(251,191,36,.15);border-color:#7c5e0d;color:#fbbf24;">C1</span>
+          <span class="tag" style="background:rgba(45,212,191,.1);border-color:#0d5953;color:#2dd4bf;">C2</span>
+          <span class="tag" style="background:rgba(129,140,248,.1);border-color:#312e7c;color:#818cf8;">C3</span>
+          <span class="tag" style="background:rgba(52,211,153,.1);border-color:#065032;color:#34d399;">C4</span>
+          <span class="tag" style="background:rgba(244,114,182,.1);border-color:#6b1040;color:#f472b6;">C5</span>
+          <span class="tag" style="background:rgba(96,165,250,.1);border-color:#1e3a6b;color:#60a5fa;">C6</span>
+          <span class="tag" style="background:rgba(167,139,250,.1);border-color:#3b2076;color:#a78bfa;">C7</span>
+          <span class="tag" style="background:rgba(251,146,60,.1);border-color:#7c3a0d;color:#fb923c;">C8</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:.9rem;font-weight:600;margin-bottom:.5rem;">Identifying Needs</h3>
+        <p style="font-size:.83rem;color:var(--muted);margin-bottom:1rem;">
+          Team distributions are compared to the league average. Clusters where the team is
+          significantly below average represent potential roster weaknesses. Clusters where the team
+          is significantly above average represent potential trade value.
+        </p>
+        <div style="font-size:.82rem;">
+          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem;padding:.5rem 
+            .75rem;background:rgba(249, 48, 22, 0.08);border:1px solid var(--orange-dim);border-radius:4px;">
+            <span style="color:var(--orange);font-weight:700;">↓ Under-represented</span>
+            <span style="color:var(--muted);">= Need</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem;padding:.5rem 
+            .75rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:4px;">
+            <span style="color:var(--text);font-weight:600;">→ At League Avg</span>
+            <span style="color:var(--muted);">= Balanced</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem;padding:.5rem 
+            .75rem;background:rgba(75, 249, 22, 0.08);border:1px solid var(--orange-dim);border-radius:4px;">
+            <span style="color:var(--orange);font-weight:600;">↑ Over-represented</span>
+            <span style="color:var(--muted);">= Surplus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- example team profile -->
+    <div class="section-label">Example Profile</div>
+    <h2 class="section-title">Team Profile: Phoenix Suns</h2>
+    <p class="section-sub">
+      This section breaks down the Phoenix Suns' team cluster distrubtion,
+      and compares it to the league average distribution.
+    </p>
+
+    <!-- team need bars -->
+    <div class="card" style="margin-bottom:1.25rem;">
+      <h3 style="font-size:.9rem;font-weight:600;margin-bottom:1rem;">Cluster Distribution vs. League Average</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem 1.5rem;">
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C0 · Developmental Wings</span>
+            <span style="color:var(--muted);"> 2 (+3.67%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:16.7%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C1 · Two-Way Forwards</span>
+            <span style="color:#d33434;"> 0 (-10.2%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:0%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C2 · Backup Facilitators</span>
+            <span style="color:#34d349;"> 3 (+9.6%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:25%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C3 · Hustle Bigs</span>
+            <span style="color:#d33434;"> 0 (-10%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:0%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C4 · Primary Ball Handlers</span>
+            <span style="color:var(--muted);"> 2 (+3.28%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:16.7%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C5 · 3-and-D Wings</span>
+            <span style="color:var(--muted);"> 1 (–3.2%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:8.3%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C6 · Rim Runners</span>
+            <span style="color:#34d349;"> 3 (+19.7%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:25%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C7 · Seconday Scorers</span>
+            <span style="color:#d33434;"> 1 (-7.87%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill purple" style="width:8.3%;"></div>
+          </div>
+        </div>
+
+        <div class="cluster-bar-row">
+          <div class="cluster-bar-label">
+            <span>C8 · Dominant Bigs</span>
+            <span style="color:var(--muted);"> 0 (–4.8%)</span>
+          </div>
+          <div class="cluster-bar-track">
+            <div class="cluster-bar-fill" style="width:0%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- recommendations table -->
+    <div class="section-label" style="margin-top:2rem;">Top Matches</div>
+    <h3 class="section-title" style="font-size:1.8rem;">Player Recommendations</h3>
+    <p class="section-sub">
+      Players ranked by how well their cluster probabilities fill this team's needs. A match
+      score of ~5 is excellent and a ~2-3 is a solid fit.
+    </p>
+
+    <div class="rec-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Primary Archetype</th>
+            <th>Addresses Need</th>
+            <th>Match Score</th>
+            <th>Key Stats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color:var(--muted);">1</td>
+            <td style="font-weight:600;">Jalen Johnson</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">3.47</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">18.9 PTS · 1.0 STOCKS · 2.2
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">2</td>
+            <td style="font-weight:600;">Scottie Barnes</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">3.36</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">19.3 PTS · 2.4 STOCKS ·
+              -2.0
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">3</td>
+            <td style="font-weight:600;">Pascal Siakam</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">3.12</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">20.2 PTS · 1.4 STOCKS · 4.0
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">4</td>
+            <td style="font-weight:600;">Julius Randle</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">3.12</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">18.7 PTS · 0.9 STOCKS · 2.4
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">5</td>
+            <td style="font-weight:600;">Josh Giddey</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">3.06</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">14.6 PTS · 1.8 STOCKS ·
+              -1.0
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">6</td>
+            <td style="font-weight:600;">Jaren Jackson Jr.</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">3.05</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">22.2 PTS · 2.7 STOCKS · 4.5
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">7</td>
+            <td style="font-weight:600;">Josh Hart</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">2.98</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">13.6 PTS · 1.9 STOCKS · 2.6
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">8</td>
+            <td style="font-weight:600;">Kristaps Porzingis</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">2.91</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">19.5 PTS · 2.2 STOCKS · 4.1
+              +/-
+            </td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted);">9</td>
+            <td style="font-weight:600;">Jimmy Butler III</td>
+            <td><span class="tag">C1 · Two-Way Forwards</span></td>
+            <td style="color:#d33434;">C1 (–10.2%)</td>
+            <td><span class="match-score match">2.90</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted);">17.5 PTS · 1.7 STOCKS · 4.5
+              +/-
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- all team data -->
+    <div class="section-label">All 30 Teams</div>
+    <h2 class="section-title">Full Team Index</h2>
+    <p class="section-sub" style="margin-bottom:1.5rem;">
+      See the complete breakdown of cluster counts and percentages
+      for each of the 30 NBA team, as well as their team needs.
+    </p>
+
+    <div class="card">
+      <h3 style="font-size:.9rem;font-weight:600;margin-bottom:.4rem;">Download the Data</h3>
+      <p style="font-size:.83rem;color:var(--muted);margin-bottom:.75rem;">
+        All team profiles and ranked recommendations are available in the CSVs below.
+        For the team_needs.csv, a value of 0 means the team is close to the league
+        average for that archetype, values above +0.10 indicate a surplus, and
+        values below -0.10 indicate a deficit.
+      </p>
+      <a class="csv-btn" href="/outputs/league_cluster_average.csv" download style="display:inline-block;">↓
+        league_cluster_average.csv</a>
+      <a class="csv-btn" href="/outputs/team_cluster_counts.csv" download style="display:inline-block;">↓
+        team_cluster_counts.csv</a>
+      <a class="csv-btn" href="/outputs/team_cluster_percentages.csv" download style="display:inline-block;">↓
+        team_cluster_percentages.csv</a>
+      <a class="csv-btn" href="/outputs/team_needs.csv" download style="display:inline-block;">↓
+        team_needs.csv</a>
+      <a class="csv-btn" href="/outputs/rank_players_for_teams.csv" download
+        style="display:inline-block;margin-top:.5rem;">↓
+        rank_players_for_teams.csv</a>
+      <a class="csv-btn" href="/outputs/summarize_teams.csv" download style="display:inline-block;margin-top:.5rem;">↓
+        summarize_teams.csv</a>
+    </div>
+    </div>
+
+  </main>
+
+  <footer>
+    NAU CS472 · NBA Player Clustering · 2024-25 Season ·
+    <a href="https://github.com/dr3w-mg/CS472-NBA-Clustering" target="_blank">GitHub Repo ↗</a>
+  </footer>
+
+</body>
+
+</html>

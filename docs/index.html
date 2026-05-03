@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA Player Clustering | NAU CS472</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-logo">NBA<span>Clustering</span></div>
+    <a href="index.html" class="active">Overview</a>
+    <a href="players.html">Players</a>
+    <a href="teams.html">Teams</a>
+  </nav>
+
+  <!-- header -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">NAU CS472 · Machine Learning · 2024–25 Season</div>
+      <h1>Clustering<br><em>NBA</em><br>Archetypes</h1>
+      <p class="hero-desc">
+        We used a Gaussian Mixture Model to soft-assign 322 NBA players into
+        9 distinct playing archetypes, then matched those archetypes to team
+        needs to display the best potential players for each roster. This project
+        was inspirered by the paper
+        <a href="https://medium.com/@ccengiz/mapping-the-modern-nba-discovering-player-archetypes-through-data-driven-clustering-2452c295c3bc"
+          target="_blank">
+          "Mapping the Modern NBA: Discovering Player Archetypes Through Data-Driven Clustering"</a>
+        and the codebase was refactored for the GMM approach based off
+        <a href="https://github.com/CenkerCengiz/INST414/blob/main/M4.ipynb" target="_blank">
+          this GitHub repository.</a>
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>322</strong>
+          <span>Qualified Players</span>
+        </div>
+        <div class="hero-stat">
+          <strong>26</strong>
+          <span>Features</span>
+        </div>
+        <div class="hero-stat">
+          <strong>9</strong>
+          <span>Archetypes</span>
+        </div>
+        <div class="hero-stat">
+          <strong>30</strong>
+          <span>Team Profiles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+
+    <!-- data collection -->
+    <div class="section-label">Pipeline</div>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">
+      From raw NBA API data to roster recommendations in four steps.
+    </p>
+
+    <div class="pipeline">
+      <div class="pipeline-step">
+        <div class="step-num">01</div>
+        <h3>Data Collection</h3>
+        <p>Pulled traditional, advanced, and hustle stats from three nba_api datasets for the 2024–25
+          regular season.</p>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">02</div>
+        <h3>Preprocessing</h3>
+        <p>Filtered to players with ≥ 30 games and ≥ 15 min/game. Joined all three tables into one 322-row dataset with
+          26 standardized features.</p>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">03</div>
+        <h3>GMM Clustering</h3>
+        <p>Used BIC/AIC model selection to choose k = 9. A Gaussian Mixture Model soft-assigns players to
+          clusters, capturing role overlap.</p>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">04</div>
+        <h3>Team Matching</h3>
+        <p>Built cluster distribution profiles for all 30 teams, compared against league averages, and ranked
+          the top 10 players for each team by a match score against team needs.</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- api -->
+    <div class="section-label">Data Sources</div>
+    <h2 class="section-title">nba_api Datasets</h2>
+    <p class="section-sub">Three complementary stat sets were merged to build a holistic player profile.</p>
+
+    <div class="sources-grid">
+      <div class="card source-card">
+        <h3>Traditional Stats</h3>
+        <p>Core box score metrics capturing volume and raw output per game.</p>
+        <div class="tags">
+          <span class="tag">PTS</span>
+          <span class="tag">REB</span>
+          <span class="tag">AST</span>
+          <span class="tag">STL</span>
+          <span class="tag">BLK</span>
+          <span class="tag">TOV</span>
+          <span class="tag">FG%</span>
+          <span class="tag">3P%</span>
+        </div>
+      </div>
+      <div class="card source-card">
+        <h3>Advanced Stats</h3>
+        <p>Efficiency and impact metrics that contextualize a player's contribution beyond counting stats.</p>
+        <div class="tags">
+          <span class="tag">USG%</span>
+          <span class="tag">TS%</span>
+          <span class="tag">ORTG</span>
+          <span class="tag">DRTG</span>
+        </div>
+      </div>
+      <div class="card source-card">
+        <h3>Hustle Stats</h3>
+        <p>Effort-based metrics that quantify non-traditional contributions and defensive activity.</p>
+        <div class="tags">
+          <span class="tag">Contested Shots</span>
+          <span class="tag">Screen AST</span>
+          <span class="tag">Charges</span>
+          <span class="tag">Deflections</span>
+          <span class="tag">Box Outs</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- modeling -->
+    <div class="section-label">Methodology</div>
+    <h2 class="section-title">Modeling Decisions</h2>
+    <p class="section-sub">Key choices made during feature engineering, model selection, and cluster assignment.</p>
+
+    <div class="method-grid">
+      <div class="card method-card">
+        <h3><span class="icon">F</span> Feature Engineering</h3>
+        <p>
+          26 features were organized into thematic groups: scoring & shot profile,
+          playmaking, rebounding, defense, and hustle. All features were
+          standardized with the scikit-learn library to prevent
+          high-magnitude stats like points from dominating smaller-scale
+          efficiency metrics.
+        </p>
+      </div>
+      <div class="card method-card">
+        <h3><span class="icon">C</span> Selecting # of Clusters</h3>
+        <p>
+          We tested cluster counts from 3 to 10 using both BIC and AIC criteria
+          to balance model fit against complexity. Both metrics converged
+          on k = 9, which produced distinct archetypes without
+          over-fragmenting.
+        </p>
+      </div>
+      <div class="card method-card">
+        <h3><span class="icon">G</span> Gaussian Mixture Model</h3>
+        <p>
+          Unlike k-means, a GMM produces soft cluster assignments (a probability
+          distribution across all 9 archetypes for each player). This reflects
+          reality: a player's role varies across lineups, opponents, and game
+          situations. A player can be 60% "3-and-D Wing" and 30% "Secondary Scorer."
+        </p>
+      </div>
+      <div class="card method-card">
+        <h3><span class="icon">T</span> Team Need Scoring</h3>
+        <p>
+          Each team's cluster distribution was compared to the league average to
+          identify gaps. Players were then ranked by how well their soft cluster
+          probabilities filled those specific team needs, highlighting players who
+          would add complementary, not redundant, value.
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- other pages -->
+    <div class="section-label">Explore</div>
+    <h2 class="section-title">Dive Into the Results</h2>
+    <div class="sources-grid" style="margin-top:1.5rem;">
+      <a href="players.html" style="text-decoration:none;">
+        <div class="card" style="cursor:pointer;">
+          <h3 style="margin-bottom:.4rem;">🏀 Player Archetypes →</h3>
+          <p style="font-size:.83rem;color:var(--muted);">
+            Browse all 9 clusters, their defining traits, example players, and stat profiles.
+          </p>
+        </div>
+      </a>
+      <a href="teams.html" style="text-decoration:none;">
+        <div class="card" style="cursor:pointer;">
+          <h3 style="margin-bottom:.4rem;">📊 Team Profiles →</h3>
+          <p style="font-size:.83rem;color:var(--muted);">
+            See each team's cluster composition, their roster gaps, and top player recommendations.
+          </p>
+        </div>
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    NAU CS472 · NBA Player Clustering · 2024-25 Season ·
+    <a href="https://github.com/dr3w-mg/CS472-NBA-Clustering" target="_blank">GitHub Repo ↗</a>
+  </footer>
+
+</body>
+
+</html>

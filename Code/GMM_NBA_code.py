@@ -420,7 +420,9 @@ def rank_players_for_team(team_name, top_n=10):
         ].head(top_n).to_string(index=False)
     )
 
-    return ranked.head(top_n)
+    result = ranked.head(top_n)
+    result["target_team"] = team_name
+    return result
 
 
 def summarize_team(team_name):
@@ -435,6 +437,7 @@ def summarize_team(team_name):
     print(f"{'Archetype':<25} {'Players':>8} {'vs League Average':>14}")
     print("-" * 52)
 
+    rows = []
     for cluster_id, name in CLUSTER_NAMES.items():
         count = counts.get(cluster_id, 0)
         need = needs.get(cluster_id, 0)
@@ -447,6 +450,38 @@ def summarize_team(team_name):
             note = "      (balanced)"
         print(f"{name:<25} {int(count):>8} {note}")
 
+        rows.append({
+            "team": team_name,
+            "archetype": name,
+            "player_count": int(count),
+            "vs_league_avg": round(need, 3),
+        })
+
+    return pd.DataFrame(rows)
+
+
+# save teams and player ranks to .csv
+all_rankings = []
+all_summaries = []
+
+for team in team_needs.index:
+    ranking_result = rank_players_for_team(team, top_n=10)
+    if ranking_result is not None:
+        all_rankings.append(ranking_result)
+
+    summary_result = summarize_team(team)
+    if summary_result is not None:
+        all_summaries.append(summary_result)
+
+pd.concat(all_rankings, ignore_index=True)[
+    ["target_team", "PLAYER_NAME", "TEAM_ABBREVIATION",
+     "PTS", "AST", "REB", "cluster_name", "fit_score"]
+].to_csv("rank_players_for_teams.csv", index=False)
+
+pd.concat(all_summaries, ignore_index=True).to_csv(
+    "summarize_teams.csv", index=False)
+
+print("\nSaved rank_players_for_teams.csv and summarize_teams.csv")
 
 # -----------------------------
 # Run example team fits and summaries
