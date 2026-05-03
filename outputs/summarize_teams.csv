@@ -1,0 +1,271 @@
+team,archetype,player_count,vs_league_avg
+ATL,Developmental Wings,2,-0.024
+ATL,Two-Way Forwards,2,-0.051
+ATL,Backup Facilitators,3,-0.077
+ATL,Hustle Bigs,1,0.024
+ATL,Primary Ball Handlers,1,0.057
+ATL,3-and-D Wings,1,0.039
+ATL,Rim Runners,1,-0.024
+ATL,Secondary Scorers,2,0.008
+ATL,Dominant Bigs,0,0.048
+BKN,Developmental Wings,4,-0.27
+BKN,Two-Way Forwards,0,0.102
+BKN,Backup Facilitators,0,0.154
+BKN,Hustle Bigs,2,-0.099
+BKN,Primary Ball Handlers,0,0.134
+BKN,3-and-D Wings,0,0.116
+BKN,Rim Runners,0,0.053
+BKN,Secondary Scorers,4,-0.238
+BKN,Dominant Bigs,0,0.048
+BOS,Developmental Wings,0,0.13
+BOS,Two-Way Forwards,1,-0.009
+BOS,Backup Facilitators,0,0.154
+BOS,Hustle Bigs,1,-0.011
+BOS,Primary Ball Handlers,3,-0.199
+BOS,3-and-D Wings,3,-0.218
+BOS,Rim Runners,1,-0.058
+BOS,Secondary Scorers,0,0.162
+BOS,Dominant Bigs,0,0.048
+CHA,Developmental Wings,5,-0.287
+CHA,Two-Way Forwards,0,0.102
+CHA,Backup Facilitators,2,-0.013
+CHA,Hustle Bigs,1,0.017
+CHA,Primary Ball Handlers,2,-0.033
+CHA,3-and-D Wings,0,0.116
+CHA,Rim Runners,2,-0.113
+CHA,Secondary Scorers,0,0.162
+CHA,Dominant Bigs,0,0.048
+CHI,Developmental Wings,2,-0.052
+CHI,Two-Way Forwards,1,0.011
+CHI,Backup Facilitators,1,0.063
+CHI,Hustle Bigs,2,-0.081
+CHI,Primary Ball Handlers,0,0.134
+CHI,3-and-D Wings,2,-0.066
+CHI,Rim Runners,0,0.053
+CHI,Secondary Scorers,2,-0.02
+CHI,Dominant Bigs,1,-0.043
+CLE,Developmental Wings,1,0.039
+CLE,Two-Way Forwards,0,0.102
+CLE,Backup Facilitators,2,-0.028
+CLE,Hustle Bigs,0,0.101
+CLE,Primary Ball Handlers,2,-0.048
+CLE,3-and-D Wings,3,-0.157
+CLE,Rim Runners,1,-0.038
+CLE,Secondary Scorers,1,0.071
+CLE,Dominant Bigs,1,-0.043
+DAL,Developmental Wings,2,-0.037
+DAL,Two-Way Forwards,1,0.019
+DAL,Backup Facilitators,2,-0.013
+DAL,Hustle Bigs,1,0.017
+DAL,Primary Ball Handlers,1,0.051
+DAL,3-and-D Wings,0,0.116
+DAL,Rim Runners,2,-0.113
+DAL,Secondary Scorers,2,-0.005
+DAL,Dominant Bigs,1,-0.035
+DEN,Developmental Wings,2,-0.12
+DEN,Two-Way Forwards,1,-0.023
+DEN,Backup Facilitators,0,0.154
+DEN,Hustle Bigs,0,0.101
+DEN,Primary Ball Handlers,1,0.009
+DEN,3-and-D Wings,2,-0.134
+DEN,Rim Runners,0,0.053
+DEN,Secondary Scorers,1,0.037
+DEN,Dominant Bigs,1,-0.077
+DET,Developmental Wings,1,0.047
+DET,Two-Way Forwards,2,-0.064
+DET,Backup Facilitators,2,-0.013
+DET,Hustle Bigs,1,0.017
+DET,Primary Ball Handlers,1,0.051
+DET,3-and-D Wings,1,0.032
+DET,Rim Runners,1,-0.03
+DET,Secondary Scorers,3,-0.088
+DET,Dominant Bigs,0,0.048
+GSW,Developmental Wings,1,0.039
+GSW,Two-Way Forwards,2,-0.079
+GSW,Backup Facilitators,1,0.063
+GSW,Hustle Bigs,1,0.01
+GSW,Primary Ball Handlers,1,0.043
+GSW,3-and-D Wings,2,-0.066
+GSW,Rim Runners,1,-0.038
+GSW,Secondary Scorers,2,-0.02
+GSW,Dominant Bigs,0,0.048
+HOU,Developmental Wings,0,0.13
+HOU,Two-Way Forwards,3,-0.273
+HOU,Backup Facilitators,1,0.029
+HOU,Hustle Bigs,0,0.101
+HOU,Primary Ball Handlers,2,-0.116
+HOU,3-and-D Wings,1,-0.009
+HOU,Rim Runners,0,0.053
+HOU,Secondary Scorers,0,0.162
+HOU,Dominant Bigs,1,-0.077
+IND,Developmental Wings,1,0.03
+IND,Two-Way Forwards,1,0.002
+IND,Backup Facilitators,3,-0.146
+IND,Hustle Bigs,1,0.001
+IND,Primary Ball Handlers,1,0.034
+IND,3-and-D Wings,1,0.016
+IND,Rim Runners,0,0.053
+IND,Secondary Scorers,2,-0.038
+IND,Dominant Bigs,0,0.048
+LAC,Developmental Wings,0,0.13
+LAC,Two-Way Forwards,0,0.102
+LAC,Backup Facilitators,2,-0.046
+LAC,Hustle Bigs,1,0.001
+LAC,Primary Ball Handlers,3,-0.166
+LAC,3-and-D Wings,2,-0.084
+LAC,Rim Runners,1,-0.047
+LAC,Secondary Scorers,1,0.062
+LAC,Dominant Bigs,0,0.048
+LAL,Developmental Wings,0,0.13
+LAL,Two-Way Forwards,0,0.102
+LAL,Backup Facilitators,3,-0.119
+LAL,Hustle Bigs,2,-0.081
+LAL,Primary Ball Handlers,3,-0.139
+LAL,3-and-D Wings,2,-0.066
+LAL,Rim Runners,1,-0.038
+LAL,Secondary Scorers,0,0.162
+LAL,Dominant Bigs,0,0.048
+MEM,Developmental Wings,1,0.03
+MEM,Two-Way Forwards,2,-0.098
+MEM,Backup Facilitators,2,-0.046
+MEM,Hustle Bigs,2,-0.099
+MEM,Primary Ball Handlers,1,0.034
+MEM,3-and-D Wings,0,0.116
+MEM,Rim Runners,0,0.053
+MEM,Secondary Scorers,2,-0.038
+MEM,Dominant Bigs,0,0.048
+MIA,Developmental Wings,1,0.047
+MIA,Two-Way Forwards,0,0.102
+MIA,Backup Facilitators,2,-0.013
+MIA,Hustle Bigs,1,0.017
+MIA,Primary Ball Handlers,1,0.051
+MIA,3-and-D Wings,3,-0.134
+MIA,Rim Runners,0,0.053
+MIA,Secondary Scorers,3,-0.088
+MIA,Dominant Bigs,1,-0.035
+MIL,Developmental Wings,0,0.13
+MIL,Two-Way Forwards,1,-0.009
+MIL,Backup Facilitators,3,-0.179
+MIL,Hustle Bigs,1,-0.011
+MIL,Primary Ball Handlers,1,0.023
+MIL,3-and-D Wings,0,0.116
+MIL,Rim Runners,0,0.053
+MIL,Secondary Scorers,2,-0.06
+MIL,Dominant Bigs,1,-0.063
+MIN,Developmental Wings,0,0.13
+MIN,Two-Way Forwards,3,-0.273
+MIN,Backup Facilitators,1,0.029
+MIN,Hustle Bigs,0,0.101
+MIN,Primary Ball Handlers,1,0.009
+MIN,3-and-D Wings,1,-0.009
+MIN,Rim Runners,1,-0.072
+MIN,Secondary Scorers,1,0.037
+MIN,Dominant Bigs,0,0.048
+NOP,Developmental Wings,3,-0.084
+NOP,Two-Way Forwards,0,0.102
+NOP,Backup Facilitators,2,0.011
+NOP,Hustle Bigs,3,-0.114
+NOP,Primary Ball Handlers,2,-0.009
+NOP,3-and-D Wings,0,0.116
+NOP,Rim Runners,1,-0.018
+NOP,Secondary Scorers,2,0.019
+NOP,Dominant Bigs,1,-0.023
+NYK,Developmental Wings,0,0.13
+NYK,Two-Way Forwards,2,-0.098
+NYK,Backup Facilitators,4,-0.246
+NYK,Hustle Bigs,1,0.001
+NYK,Primary Ball Handlers,1,0.034
+NYK,3-and-D Wings,0,0.116
+NYK,Rim Runners,0,0.053
+NYK,Secondary Scorers,1,0.062
+NYK,Dominant Bigs,1,-0.052
+OKC,Developmental Wings,0,0.13
+OKC,Two-Way Forwards,1,0.019
+OKC,Backup Facilitators,1,0.071
+OKC,Hustle Bigs,0,0.101
+OKC,Primary Ball Handlers,2,-0.033
+OKC,3-and-D Wings,7,-0.468
+OKC,Rim Runners,0,0.053
+OKC,Secondary Scorers,0,0.162
+OKC,Dominant Bigs,1,-0.035
+ORL,Developmental Wings,2,-0.07
+ORL,Two-Way Forwards,1,0.002
+ORL,Backup Facilitators,0,0.154
+ORL,Hustle Bigs,2,-0.099
+ORL,Primary Ball Handlers,4,-0.266
+ORL,3-and-D Wings,0,0.116
+ORL,Rim Runners,0,0.053
+ORL,Secondary Scorers,1,0.062
+ORL,Dominant Bigs,0,0.048
+PHI,Developmental Wings,2,-0.024
+PHI,Two-Way Forwards,1,0.025
+PHI,Backup Facilitators,4,-0.154
+PHI,Hustle Bigs,2,-0.053
+PHI,Primary Ball Handlers,2,-0.02
+PHI,3-and-D Wings,0,0.116
+PHI,Rim Runners,1,-0.024
+PHI,Secondary Scorers,1,0.085
+PHI,Dominant Bigs,0,0.048
+PHX,Developmental Wings,2,-0.037
+PHX,Two-Way Forwards,0,0.102
+PHX,Backup Facilitators,3,-0.096
+PHX,Hustle Bigs,0,0.101
+PHX,Primary Ball Handlers,2,-0.033
+PHX,3-and-D Wings,1,0.032
+PHX,Rim Runners,3,-0.197
+PHX,Secondary Scorers,1,0.079
+PHX,Dominant Bigs,0,0.048
+POR,Developmental Wings,1,0.03
+POR,Two-Way Forwards,2,-0.098
+POR,Backup Facilitators,1,0.054
+POR,Hustle Bigs,1,0.001
+POR,Primary Ball Handlers,0,0.134
+POR,3-and-D Wings,0,0.116
+POR,Rim Runners,0,0.053
+POR,Secondary Scorers,4,-0.238
+POR,Dominant Bigs,1,-0.052
+SAC,Developmental Wings,0,0.13
+SAC,Two-Way Forwards,1,-0.009
+SAC,Backup Facilitators,0,0.154
+SAC,Hustle Bigs,1,-0.011
+SAC,Primary Ball Handlers,1,0.023
+SAC,3-and-D Wings,3,-0.218
+SAC,Rim Runners,0,0.053
+SAC,Secondary Scorers,2,-0.06
+SAC,Dominant Bigs,1,-0.063
+SAS,Developmental Wings,1,0.019
+SAS,Two-Way Forwards,0,0.102
+SAS,Backup Facilitators,1,0.043
+SAS,Hustle Bigs,1,-0.011
+SAS,Primary Ball Handlers,1,0.023
+SAS,3-and-D Wings,1,0.005
+SAS,Rim Runners,0,0.053
+SAS,Secondary Scorers,3,-0.171
+SAS,Dominant Bigs,1,-0.063
+TOR,Developmental Wings,3,-0.12
+TOR,Two-Way Forwards,1,0.019
+TOR,Backup Facilitators,2,-0.013
+TOR,Hustle Bigs,2,-0.066
+TOR,Primary Ball Handlers,1,0.051
+TOR,3-and-D Wings,0,0.116
+TOR,Rim Runners,0,0.053
+TOR,Secondary Scorers,2,-0.005
+TOR,Dominant Bigs,1,-0.035
+UTA,Developmental Wings,4,-0.156
+UTA,Two-Way Forwards,2,-0.04
+UTA,Backup Facilitators,2,0.011
+UTA,Hustle Bigs,1,0.029
+UTA,Primary Ball Handlers,0,0.134
+UTA,3-and-D Wings,0,0.116
+UTA,Rim Runners,0,0.053
+UTA,Secondary Scorers,4,-0.124
+UTA,Dominant Bigs,1,-0.023
+WAS,Developmental Wings,3,-0.17
+WAS,Two-Way Forwards,0,0.102
+WAS,Backup Facilitators,1,0.054
+WAS,Hustle Bigs,1,0.001
+WAS,Primary Ball Handlers,1,0.034
+WAS,3-and-D Wings,0,0.116
+WAS,Rim Runners,1,-0.047
+WAS,Secondary Scorers,3,-0.138
+WAS,Dominant Bigs,0,0.048

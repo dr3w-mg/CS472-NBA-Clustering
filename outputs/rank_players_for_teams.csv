@@ -1,0 +1,301 @@
+target_team,PLAYER_NAME,TEAM_ABBREVIATION,PTS,AST,REB,cluster_name,fit_score
+ATL,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+ATL,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,2.5157412587412593
+ATL,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,2.515741258741196
+ATL,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,2.367420912420844
+ATL,Cade Cunningham,DET,26.1,9.1,6.1,Primary Ball Handlers,2.3560116550116126
+ATL,Giannis Antetokounmpo,MIL,30.4,6.5,11.9,Dominant Bigs,2.3445829725829723
+ATL,LeBron James,LAL,24.4,8.2,7.8,Primary Ball Handlers,2.3046626556500853
+ATL,Paolo Banchero,ORL,25.9,4.8,7.5,Primary Ball Handlers,2.1791533364811317
+ATL,Anthony Edwards,MIN,27.6,4.5,5.7,Primary Ball Handlers,2.156349650349617
+ATL,LaMelo Ball,CHA,25.2,7.4,4.9,Primary Ball Handlers,2.139235764235608
+BKN,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,5.908048951048951
+BKN,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,5.908048951048364
+BKN,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,5.559728604728432
+BKN,Cade Cunningham,DET,26.1,9.1,6.1,Primary Ball Handlers,5.532934731934717
+BKN,LeBron James,LAL,24.4,8.2,7.8,Primary Ball Handlers,5.412360127836997
+BKN,Trae Young,ATL,24.2,11.6,3.1,Primary Ball Handlers,5.2114082584081025
+BKN,Paolo Banchero,ORL,25.9,4.8,7.5,Primary Ball Handlers,5.117625314745169
+BKN,Anthony Edwards,MIN,27.6,4.5,5.7,Primary Ball Handlers,5.064041958041717
+BKN,LaMelo Ball,CHA,25.2,7.4,4.9,Primary Ball Handlers,5.023851148849969
+BKN,James Harden,LAC,22.8,8.7,5.8,Primary Ball Handlers,4.997057276057259
+BOS,DeMar DeRozan,SAC,22.2,4.4,3.9,Secondary Scorers,4.798699845426131
+BOS,Coby White,CHI,20.4,4.5,3.7,Secondary Scorers,4.59261238341847
+BOS,CJ McCollum,NOP,21.1,4.1,3.8,Secondary Scorers,4.383874920700206
+BOS,Anfernee Simons,POR,19.3,4.8,2.7,Secondary Scorers,4.326945397537683
+BOS,Cameron Johnson,BKN,18.8,3.4,4.3,Secondary Scorers,4.28311136124778
+BOS,Immanuel Quickley,TOR,17.1,5.8,3.5,Secondary Scorers,4.2750619234297975
+BOS,Keyonte George,UTA,16.8,5.6,3.8,Secondary Scorers,4.242847756450689
+BOS,Shaedon Sharpe,POR,18.5,2.8,4.5,Secondary Scorers,4.176730669930509
+BOS,Jaden Ivey,DET,17.6,4.0,4.1,Secondary Scorers,4.149803066013132
+BOS,Collin Sexton,UTA,18.4,4.2,2.7,Secondary Scorers,4.091326511483231
+CHA,DeMar DeRozan,SAC,22.2,4.4,3.9,Secondary Scorers,4.863558087354133
+CHA,Coby White,CHI,20.4,4.5,3.7,Secondary Scorers,4.610600751386731
+CHA,CJ McCollum,NOP,21.1,4.1,3.8,Secondary Scorers,4.528032171472897
+CHA,Anfernee Simons,POR,19.3,4.8,2.7,Secondary Scorers,4.333017420513955
+CHA,Cameron Johnson,BKN,18.8,3.4,4.3,Secondary Scorers,4.286992649505281
+CHA,Immanuel Quickley,TOR,17.1,5.8,3.5,Secondary Scorers,4.275185994695016
+CHA,Keyonte George,UTA,16.8,5.6,3.8,Secondary Scorers,4.242891239392066
+CHA,Shaedon Sharpe,POR,18.5,2.8,4.5,Secondary Scorers,4.177391977357916
+CHA,Jaden Ivey,DET,17.6,4.0,4.1,Secondary Scorers,4.155415740175639
+CHA,Malik Monk,SAC,17.2,5.6,3.8,Secondary Scorers,4.109140800497855
+CHI,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,5.908048951048951
+CHI,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,5.908048951047731
+CHI,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,5.559728604728214
+CHI,Cade Cunningham,DET,26.1,9.1,6.1,Primary Ball Handlers,5.532934731934677
+CHI,LeBron James,LAL,24.4,8.2,7.8,Primary Ball Handlers,5.412353938379843
+CHI,Trae Young,ATL,24.2,11.6,3.1,Primary Ball Handlers,5.211408258408195
+CHI,Paolo Banchero,ORL,25.9,4.8,7.5,Primary Ball Handlers,5.117612819838842
+CHI,Anthony Edwards,MIN,27.6,4.5,5.7,Primary Ball Handlers,5.064041958041856
+CHI,LaMelo Ball,CHA,25.2,7.4,4.9,Primary Ball Handlers,5.0238511488506585
+CHI,James Harden,LAC,22.8,8.7,5.8,Primary Ball Handlers,4.997057276057196
+CLE,Jalen Johnson,ATL,18.9,5.0,10.0,Two-Way Forwards,3.468334791435447
+CLE,Scottie Barnes,TOR,19.3,5.8,7.7,Two-Way Forwards,3.3579837782551625
+CLE,Pascal Siakam,IND,20.2,3.4,6.9,Two-Way Forwards,3.1225426339348705
+CLE,Julius Randle,MIN,18.7,4.7,7.1,Two-Way Forwards,3.1225070752849238
+CLE,Josh Giddey,CHI,14.6,7.2,8.1,Two-Way Forwards,3.060825975268573
+CLE,Jaren Jackson Jr.,MEM,22.2,2.0,5.6,Two-Way Forwards,3.050832601671248
+CLE,John Collins,UTA,19.0,2.0,8.2,Two-Way Forwards,2.987745538149215
+CLE,Josh Hart,NYK,13.6,5.9,9.6,Two-Way Forwards,2.9771725920959664
+CLE,Kristaps Porziņģis,BOS,19.5,2.1,6.8,Two-Way Forwards,2.906284891488744
+CLE,Jimmy Butler III,GSW,17.5,5.4,5.4,Two-Way Forwards,2.897310272407384
+DAL,Christian Braun,DEN,15.4,2.6,5.2,3-and-D Wings,2.682626899833808
+DAL,Aaron Gordon,DEN,14.7,3.2,4.8,3-and-D Wings,2.6273557865223895
+DAL,Payton Pritchard,BOS,14.3,3.5,3.8,3-and-D Wings,2.4916013917725093
+DAL,Brandin Podziemski,GSW,11.7,3.4,5.1,3-and-D Wings,2.3383512634252446
+DAL,Rui Hachimura,LAL,13.1,1.4,5.0,3-and-D Wings,2.2517171405656877
+DAL,Dillon Brooks,HOU,14.0,1.7,3.7,3-and-D Wings,2.2454912762795223
+DAL,Jrue Holiday,BOS,11.1,3.9,4.3,3-and-D Wings,2.2342198396446094
+DAL,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,2.2330489510489513
+DAL,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,2.2330489510483598
+DAL,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,2.1013952713950954
+DEN,Chris Paul,SAS,8.8,7.4,3.6,Backup Facilitators,3.0481036036871862
+DEN,Ty Jerome,CLE,12.5,3.4,2.5,Backup Facilitators,2.8214638915296266
+DEN,Tyus Jones,PHX,10.2,5.3,2.4,Backup Facilitators,2.7575848204936713
+DEN,Spencer Dinwiddie,DAL,11.0,4.4,2.6,Backup Facilitators,2.6334865076996175
+DEN,T.J. McConnell,IND,9.1,4.4,2.4,Backup Facilitators,2.4490446548927567
+DEN,Mike Conley,MIN,8.2,4.5,2.6,Backup Facilitators,2.357022861762435
+DEN,Myles Turner,IND,15.6,1.5,6.5,Hustle Bigs,2.348643744042074
+DEN,Brice Sensabaugh,UTA,10.9,1.5,3.0,Backup Facilitators,2.3377859319104277
+DEN,Davion Mitchell,MIA,7.9,4.9,2.3,Backup Facilitators,2.3262288084282887
+DEN,Onyeka Okongwu,ATL,13.4,2.3,8.9,Hustle Bigs,2.319664573948156
+DET,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+DET,Giannis Antetokounmpo,MIL,30.4,6.5,11.9,Dominant Bigs,2.3445829725829723
+DET,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,2.233048951048952
+DET,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,2.233048951048932
+DET,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,2.1013952713952113
+DET,LeBron James,LAL,24.4,8.2,7.8,Primary Ball Handlers,2.0456878663011766
+DET,Trae Young,ATL,24.2,11.6,3.1,Primary Ball Handlers,1.969741591741534
+DET,Karl-Anthony Towns,NYK,24.4,3.1,12.8,Dominant Bigs,1.9362027417027414
+DET,Paolo Banchero,ORL,25.9,4.8,7.5,Primary Ball Handlers,1.9342806716257959
+DET,Anthony Edwards,MIN,27.6,4.5,5.7,Primary Ball Handlers,1.9140419580418668
+GSW,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+GSW,Giannis Antetokounmpo,MIL,30.4,6.5,11.9,Dominant Bigs,2.3445829725829723
+GSW,Karl-Anthony Towns,NYK,24.4,3.1,12.8,Dominant Bigs,1.9362027417027414
+GSW,Anthony Davis,DAL,24.7,3.5,11.6,Dominant Bigs,1.912180375180375
+GSW,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,1.8989580419580745
+GSW,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,1.8989580419580423
+GSW,Domantas Sabonis,SAC,19.1,6.0,13.9,Dominant Bigs,1.8737445887445887
+GSW,Victor Wembanyama,SAS,24.3,3.7,11.0,Dominant Bigs,1.8737445887419648
+GSW,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,1.7870013320012819
+GSW,Zion Williamson,NOP,24.6,5.3,7.2,Dominant Bigs,1.7821070938289159
+HOU,DeMar DeRozan,SAC,22.2,4.4,3.9,Secondary Scorers,4.831128756109041
+HOU,Coby White,CHI,20.4,4.5,3.7,Secondary Scorers,4.601606567347356
+HOU,CJ McCollum,NOP,21.1,4.1,3.8,Secondary Scorers,4.455953546083742
+HOU,Anfernee Simons,POR,19.3,4.8,2.7,Secondary Scorers,4.329981409025505
+HOU,Cameron Johnson,BKN,18.8,3.4,4.3,Secondary Scorers,4.285051627184184
+HOU,Immanuel Quickley,TOR,17.1,5.8,3.5,Secondary Scorers,4.275123959051313
+HOU,Keyonte George,UTA,16.8,5.6,3.8,Secondary Scorers,4.242869497921375
+HOU,Shaedon Sharpe,POR,18.5,2.8,4.5,Secondary Scorers,4.177061300776344
+HOU,Jaden Ivey,DET,17.6,4.0,4.1,Secondary Scorers,4.152606416305457
+HOU,Collin Sexton,UTA,18.4,4.2,2.7,Secondary Scorers,4.09267935326385
+IND,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+IND,Giannis Antetokounmpo,MIL,30.4,6.5,11.9,Dominant Bigs,2.3445829725829723
+IND,Karl-Anthony Towns,NYK,24.4,3.1,12.8,Dominant Bigs,1.9362027417027414
+IND,Anthony Davis,DAL,24.7,3.5,11.6,Dominant Bigs,1.912180375180375
+IND,Domantas Sabonis,SAC,19.1,6.0,13.9,Dominant Bigs,1.8737445887445887
+IND,Victor Wembanyama,SAS,24.3,3.7,11.0,Dominant Bigs,1.8737445887436524
+IND,Zion Williamson,NOP,24.6,5.3,7.2,Dominant Bigs,1.7823333259784857
+IND,Ivica Zubac,LAC,16.8,2.7,12.6,Rim Runners,1.7128333052027889
+IND,Alperen Sengun,HOU,19.1,4.9,10.3,Dominant Bigs,1.6479343434343432
+IND,Nikola Vučević,CHI,18.5,3.5,10.1,Dominant Bigs,1.5422359237826846
+LAC,Jalen Johnson,ATL,18.9,5.0,10.0,Two-Way Forwards,3.4697711501635076
+LAC,Scottie Barnes,TOR,19.3,5.8,7.7,Two-Way Forwards,3.3579998895036733
+LAC,Pascal Siakam,IND,20.2,3.4,6.9,Two-Way Forwards,3.122542784064313
+LAC,Julius Randle,MIN,18.7,4.7,7.1,Two-Way Forwards,3.1225294819689373
+LAC,Josh Giddey,CHI,14.6,7.2,8.1,Two-Way Forwards,3.0605981217222977
+LAC,Jaren Jackson Jr.,MEM,22.2,2.0,5.6,Two-Way Forwards,3.050796991008211
+LAC,John Collins,UTA,19.0,2.0,8.2,Two-Way Forwards,2.9888129313814784
+LAC,Josh Hart,NYK,13.6,5.9,9.6,Two-Way Forwards,2.9784497292183687
+LAC,Kristaps Porziņģis,BOS,19.5,2.1,6.8,Two-Way Forwards,2.907044674114152
+LAC,Jimmy Butler III,GSW,17.5,5.4,5.4,Two-Way Forwards,2.8973102727874314
+LAL,DeMar DeRozan,SAC,22.2,4.4,3.9,Secondary Scorers,4.82228470721711
+LAL,Coby White,CHI,20.4,4.5,3.7,Secondary Scorers,4.59915360814643
+LAL,CJ McCollum,NOP,21.1,4.1,3.8,Secondary Scorers,4.436295739163625
+LAL,Anfernee Simons,POR,19.3,4.8,2.7,Secondary Scorers,4.32915340589276
+LAL,Cameron Johnson,BKN,18.8,3.4,4.3,Secondary Scorers,4.284522822740683
+LAL,Immanuel Quickley,TOR,17.1,5.8,3.5,Secondary Scorers,4.2751070402441576
+LAL,Keyonte George,UTA,16.8,5.6,3.8,Secondary Scorers,4.242863568429373
+LAL,Shaedon Sharpe,POR,18.5,2.8,4.5,Secondary Scorers,4.17697115042032
+LAL,Jaden Ivey,DET,17.6,4.0,4.1,Secondary Scorers,4.151844699543292
+LAL,Collin Sexton,UTA,18.4,4.2,2.7,Secondary Scorers,4.092310414113878
+MEM,Christian Braun,DEN,15.4,2.6,5.2,3-and-D Wings,2.6789249252894805
+MEM,Aaron Gordon,DEN,14.7,3.2,4.8,3-and-D Wings,2.6268026076214235
+MEM,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+MEM,Payton Pritchard,BOS,14.3,3.5,3.8,3-and-D Wings,2.489146270186304
+MEM,Giannis Antetokounmpo,MIL,30.4,6.5,11.9,Dominant Bigs,2.3445829725829723
+MEM,Brandin Podziemski,GSW,11.7,3.4,5.1,3-and-D Wings,2.338283228255836
+MEM,Dillon Brooks,HOU,14.0,1.7,3.7,3-and-D Wings,2.2454511025461312
+MEM,Rui Hachimura,LAL,13.1,1.4,5.0,3-and-D Wings,2.245314485456488
+MEM,Jrue Holiday,BOS,11.1,3.9,4.3,3-and-D Wings,2.234218225370591
+MEM,Harrison Barnes,SAS,12.3,1.7,3.8,3-and-D Wings,2.0604047933013585
+MIA,Jalen Johnson,ATL,18.9,5.0,10.0,Two-Way Forwards,3.4684544881062562
+MIA,Scottie Barnes,TOR,19.3,5.8,7.7,Two-Way Forwards,3.357986335471857
+MIA,Pascal Siakam,IND,20.2,3.4,6.9,Two-Way Forwards,3.1225426464454857
+MIA,Julius Randle,MIN,18.7,4.7,7.1,Two-Way Forwards,3.122508942508573
+MIA,Josh Giddey,CHI,14.6,7.2,8.1,Two-Way Forwards,3.061015913513898
+MIA,Jaren Jackson Jr.,MEM,22.2,2.0,5.6,Two-Way Forwards,3.0508623050467167
+MIA,John Collins,UTA,19.0,2.0,8.2,Two-Way Forwards,2.987834487050336
+MIA,Josh Hart,NYK,13.6,5.9,9.6,Two-Way Forwards,2.9772790201895
+MIA,Kristaps Porziņģis,BOS,19.5,2.1,6.8,Two-Way Forwards,2.90632530973205
+MIA,Jimmy Butler III,GSW,17.5,5.4,5.4,Two-Way Forwards,2.897310272444373
+MIL,Christian Braun,DEN,15.4,2.6,5.2,3-and-D Wings,2.6817454772854363
+MIL,Aaron Gordon,DEN,14.7,3.2,4.8,3-and-D Wings,2.6272240772705615
+MIL,Payton Pritchard,BOS,14.3,3.5,3.8,3-and-D Wings,2.4875095466255783
+MIL,Brandin Podziemski,GSW,11.7,3.4,5.1,3-and-D Wings,2.3383350639894283
+MIL,Rui Hachimura,LAL,13.1,1.4,5.0,3-and-D Wings,2.250443297341565
+MIL,Dillon Brooks,HOU,14.0,1.7,3.7,3-and-D Wings,2.2454474869178265
+MIL,Jrue Holiday,BOS,11.1,3.9,4.3,3-and-D Wings,2.2342194510218767
+MIL,Corey Kispert,WAS,11.6,1.7,3.0,Developmental Wings,2.110077515627609
+MIL,Harrison Barnes,SAS,12.3,1.7,3.8,3-and-D Wings,2.0606055352056414
+MIL,Aaron Wiggins,OKC,12.0,1.8,3.9,3-and-D Wings,2.048392010964299
+MIN,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+MIN,Onyeka Okongwu,ATL,13.4,2.3,8.9,Hustle Bigs,2.4274260478554397
+MIN,Giannis Antetokounmpo,MIL,30.4,6.5,11.9,Dominant Bigs,2.3445829725829723
+MIN,Myles Turner,IND,15.6,1.5,6.5,Hustle Bigs,2.316916968217575
+MIN,Alex Sarr,WAS,13.0,2.4,6.5,Hustle Bigs,2.2012943331783275
+MIN,Corey Kispert,WAS,11.6,1.7,3.0,Developmental Wings,2.1146223986081263
+MIN,Jeremy Sochan,SAS,11.4,2.4,6.5,Hustle Bigs,2.039714354951842
+MIN,Ochai Agbaji,TOR,10.4,1.5,3.8,Developmental Wings,2.0392632399780077
+MIN,Jonas Valančiūnas,SAC,10.4,2.0,7.7,Hustle Bigs,2.020367163387861
+MIN,Justin Champagnie,WAS,8.8,1.0,5.7,Developmental Wings,2.0143430619769807
+NOP,Jalen Johnson,ATL,18.9,5.0,10.0,Two-Way Forwards,3.468642582656816
+NOP,Scottie Barnes,TOR,19.3,5.8,7.7,Two-Way Forwards,3.3579879514247137
+NOP,Pascal Siakam,IND,20.2,3.4,6.9,Two-Way Forwards,3.122542666104954
+NOP,Julius Randle,MIN,18.7,4.7,7.1,Two-Way Forwards,3.122511876717165
+NOP,Josh Giddey,CHI,14.6,7.2,8.1,Two-Way Forwards,3.060901127598831
+NOP,Jaren Jackson Jr.,MEM,22.2,2.0,5.6,Two-Way Forwards,3.050844357960586
+NOP,John Collins,UTA,19.0,2.0,8.2,Two-Way Forwards,2.9879742638949542
+NOP,Josh Hart,NYK,13.6,5.9,9.6,Two-Way Forwards,2.977446264336481
+NOP,Kristaps Porziņģis,BOS,19.5,2.1,6.8,Two-Way Forwards,2.9063888241143885
+NOP,Jimmy Butler III,GSW,17.5,5.4,5.4,Two-Way Forwards,2.89731027257089
+NYK,Christian Braun,DEN,15.4,2.6,5.2,3-and-D Wings,2.6789284739863706
+NYK,Aaron Gordon,DEN,14.7,3.2,4.8,3-and-D Wings,2.6268122351704744
+NYK,Payton Pritchard,BOS,14.3,3.5,3.8,3-and-D Wings,2.4965114314414802
+NYK,Brandin Podziemski,GSW,11.7,3.4,5.1,3-and-D Wings,2.3382832282558423
+NYK,Dillon Brooks,HOU,14.0,1.7,3.7,3-and-D Wings,2.2456941617151625
+NYK,Rui Hachimura,LAL,13.1,1.4,5.0,3-and-D Wings,2.245670149381167
+NYK,Jrue Holiday,BOS,11.1,3.9,4.3,3-and-D Wings,2.234218234338386
+NYK,Corey Kispert,WAS,11.6,1.7,3.0,Developmental Wings,2.10895147391991
+NYK,Harrison Barnes,SAS,12.3,1.7,3.8,3-and-D Wings,2.060605537891242
+NYK,Aaron Wiggins,OKC,12.0,1.8,3.9,3-and-D Wings,2.0488151842992917
+OKC,DeMar DeRozan,SAC,22.2,4.4,3.9,Secondary Scorers,4.863558032498194
+OKC,Coby White,CHI,20.4,4.5,3.7,Secondary Scorers,4.61060075137232
+OKC,CJ McCollum,NOP,21.1,4.1,3.8,Secondary Scorers,4.528032171472163
+OKC,Anfernee Simons,POR,19.3,4.8,2.7,Secondary Scorers,4.333017420513873
+OKC,Cameron Johnson,BKN,18.8,3.4,4.3,Secondary Scorers,4.2869925473261645
+OKC,Immanuel Quickley,TOR,17.1,5.8,3.5,Secondary Scorers,4.275185994697144
+OKC,Keyonte George,UTA,16.8,5.6,3.8,Secondary Scorers,4.2428912393920655
+OKC,Shaedon Sharpe,POR,18.5,2.8,4.5,Secondary Scorers,4.177391971392384
+OKC,Jaden Ivey,DET,17.6,4.0,4.1,Secondary Scorers,4.15541496101331
+OKC,Malik Monk,SAC,17.2,5.6,3.8,Secondary Scorers,4.109140779316775
+ORL,Chris Paul,SAS,8.8,7.4,3.6,Backup Facilitators,3.0487477941470824
+ORL,Ty Jerome,CLE,12.5,3.4,2.5,Backup Facilitators,2.8320959204190608
+ORL,Tyus Jones,PHX,10.2,5.3,2.4,Backup Facilitators,2.757584833975972
+ORL,Christian Braun,DEN,15.4,2.6,5.2,3-and-D Wings,2.6820944975297554
+ORL,Spencer Dinwiddie,DAL,11.0,4.4,2.6,Backup Facilitators,2.663269910583221
+ORL,Aaron Gordon,DEN,14.7,3.2,4.8,3-and-D Wings,2.627267133474841
+ORL,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+ORL,Payton Pritchard,BOS,14.3,3.5,3.8,3-and-D Wings,2.4965105297197683
+ORL,T.J. McConnell,IND,9.1,4.4,2.4,Backup Facilitators,2.4491364804179967
+ORL,Jose Alvarado,NOP,10.3,4.6,2.4,Backup Facilitators,2.3792180687155136
+PHI,Christian Braun,DEN,15.4,2.6,5.2,3-and-D Wings,2.682827575250689
+PHI,Aaron Gordon,DEN,14.7,3.2,4.8,3-and-D Wings,2.627378775228062
+PHI,DeMar DeRozan,SAC,22.2,4.4,3.9,Secondary Scorers,2.5523278705469985
+PHI,Nikola Jokić,DEN,29.6,10.2,12.7,Dominant Bigs,2.522348484848485
+PHI,Payton Pritchard,BOS,14.3,3.5,3.8,3-and-D Wings,2.4982109374456294
+PHI,Coby White,CHI,20.4,4.5,3.7,Secondary Scorers,2.420286795666988
+PHI,CJ McCollum,NOP,21.1,4.1,3.8,Secondary Scorers,2.3748860757345867
+PHI,Giannis Antetokounmpo,MIL,30.4,6.5,11.9,Dominant Bigs,2.3445829725829723
+PHI,Brandin Podziemski,GSW,11.7,3.4,5.1,3-and-D Wings,2.3383549998635087
+PHI,Anfernee Simons,POR,19.3,4.8,2.7,Secondary Scorers,2.2747485098088136
+PHX,Jalen Johnson,ATL,18.9,5.0,10.0,Two-Way Forwards,3.4697711502990614
+PHX,Scottie Barnes,TOR,19.3,5.8,7.7,Two-Way Forwards,3.358001384411552
+PHX,Pascal Siakam,IND,20.2,3.4,6.9,Two-Way Forwards,3.1225427840646334
+PHX,Julius Randle,MIN,18.7,4.7,7.1,Two-Way Forwards,3.1225294819689617
+PHX,Josh Giddey,CHI,14.6,7.2,8.1,Two-Way Forwards,3.0608552614648827
+PHX,Jaren Jackson Jr.,MEM,22.2,2.0,5.6,Two-Way Forwards,3.050837201384484
+PHX,John Collins,UTA,19.0,2.0,8.2,Two-Way Forwards,2.98881293209468
+PHX,Josh Hart,NYK,13.6,5.9,9.6,Two-Way Forwards,2.9784497292183687
+PHX,Kristaps Porziņģis,BOS,19.5,2.1,6.8,Two-Way Forwards,2.907075203414789
+PHX,Jimmy Butler III,GSW,17.5,5.4,5.4,Two-Way Forwards,2.8973102728246687
+POR,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,5.908048951048951
+POR,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,5.9080489510476655
+POR,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,5.559728604728141
+POR,Cade Cunningham,DET,26.1,9.1,6.1,Primary Ball Handlers,5.532934731934634
+POR,LeBron James,LAL,24.4,8.2,7.8,Primary Ball Handlers,5.412346558311203
+POR,Trae Young,ATL,24.2,11.6,3.1,Primary Ball Handlers,5.2114082584081025
+POR,Paolo Banchero,ORL,25.9,4.8,7.5,Primary Ball Handlers,5.11759791227811
+POR,Anthony Edwards,MIN,27.6,4.5,5.7,Primary Ball Handlers,5.064041958041713
+POR,LaMelo Ball,CHA,25.2,7.4,4.9,Primary Ball Handlers,5.023851148849969
+POR,James Harden,LAC,22.8,8.7,5.8,Primary Ball Handlers,4.997057276057119
+SAC,Chris Paul,SAS,8.8,7.4,3.6,Backup Facilitators,3.046437207971372
+SAC,Ty Jerome,CLE,12.5,3.4,2.5,Backup Facilitators,2.817025892385374
+SAC,Tyus Jones,PHX,10.2,5.3,2.4,Backup Facilitators,2.757584810921065
+SAC,Spencer Dinwiddie,DAL,11.0,4.4,2.6,Backup Facilitators,2.517676593707154
+SAC,T.J. McConnell,IND,9.1,4.4,2.4,Backup Facilitators,2.448687557571709
+SAC,Mike Conley,MIN,8.2,4.5,2.6,Backup Facilitators,2.3570173897260758
+SAC,Brice Sensabaugh,UTA,10.9,1.5,3.0,Backup Facilitators,2.3282241801896917
+SAC,Davion Mitchell,MIA,7.9,4.9,2.3,Backup Facilitators,2.326227268382069
+SAC,Luke Kennard,MEM,8.9,3.3,2.8,Backup Facilitators,2.3090957173314006
+SAC,Grayson Allen,PHX,10.6,2.1,3.0,Backup Facilitators,2.255792057628221
+SAS,Jalen Johnson,ATL,18.9,5.0,10.0,Two-Way Forwards,3.468015600652173
+SAS,Scottie Barnes,TOR,19.3,5.8,7.7,Two-Way Forwards,3.3579806962803427
+SAS,Pascal Siakam,IND,20.2,3.4,6.9,Two-Way Forwards,3.122542600572419
+SAS,Julius Randle,MIN,18.7,4.7,7.1,Two-Way Forwards,3.1225020960217766
+SAS,Josh Giddey,CHI,14.6,7.2,8.1,Two-Way Forwards,3.0609623226374927
+SAS,Jaren Jackson Jr.,MEM,22.2,2.0,5.6,Two-Way Forwards,3.0508539186106804
+SAS,John Collins,UTA,19.0,2.0,8.2,Two-Way Forwards,2.987508338702221
+SAS,Josh Hart,NYK,13.6,5.9,9.6,Two-Way Forwards,2.9768887838465434
+SAS,Kristaps Porziņģis,BOS,19.5,2.1,6.8,Two-Way Forwards,2.9060753451711374
+SAS,Jimmy Butler III,GSW,17.5,5.4,5.4,Two-Way Forwards,2.897310272379667
+TOR,Christian Braun,DEN,15.4,2.6,5.2,3-and-D Wings,2.682623942530519
+TOR,Aaron Gordon,DEN,14.7,3.2,4.8,3-and-D Wings,2.6273477635914815
+TOR,Payton Pritchard,BOS,14.3,3.5,3.8,3-and-D Wings,2.491601391772509
+TOR,Brandin Podziemski,GSW,11.7,3.4,5.1,3-and-D Wings,2.3383512634252446
+TOR,Rui Hachimura,LAL,13.1,1.4,5.0,3-and-D Wings,2.251420754122232
+TOR,Dillon Brooks,HOU,14.0,1.7,3.7,3-and-D Wings,2.245457038470304
+TOR,Jrue Holiday,BOS,11.1,3.9,4.3,3-and-D Wings,2.2342198396443114
+TOR,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,2.2330489510489513
+TOR,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,2.2330489510483598
+TOR,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,2.1013952713950954
+UTA,Luka Dončić,LAL,28.2,7.7,8.2,Primary Ball Handlers,5.908048951048951
+UTA,Shai Gilgeous-Alexander,OKC,32.7,6.4,5.0,Primary Ball Handlers,5.908048951047865
+UTA,Jayson Tatum,BOS,26.8,6.0,8.7,Primary Ball Handlers,5.559728604728224
+UTA,Cade Cunningham,DET,26.1,9.1,6.1,Primary Ball Handlers,5.532934731934658
+UTA,LeBron James,LAL,24.4,8.2,7.8,Primary Ball Handlers,5.412350435318573
+UTA,Trae Young,ATL,24.2,11.6,3.1,Primary Ball Handlers,5.2114082584081505
+UTA,Paolo Banchero,ORL,25.9,4.8,7.5,Primary Ball Handlers,5.117605741554413
+UTA,Anthony Edwards,MIN,27.6,4.5,5.7,Primary Ball Handlers,5.064041958041789
+UTA,LaMelo Ball,CHA,25.2,7.4,4.9,Primary Ball Handlers,5.023851148850329
+UTA,James Harden,LAC,22.8,8.7,5.8,Primary Ball Handlers,4.997057276057159
+WAS,Jalen Johnson,ATL,18.9,5.0,10.0,Two-Way Forwards,3.4697711503668383
+WAS,Scottie Barnes,TOR,19.3,5.8,7.7,Two-Way Forwards,3.3580021318654913
+WAS,Pascal Siakam,IND,20.2,3.4,6.9,Two-Way Forwards,3.122542784064379
+WAS,Julius Randle,MIN,18.7,4.7,7.1,Two-Way Forwards,3.1225294819689373
+WAS,Josh Giddey,CHI,14.6,7.2,8.1,Two-Way Forwards,3.0609838313361726
+WAS,Jaren Jackson Jr.,MEM,22.2,2.0,5.6,Two-Way Forwards,3.0508573065726208
+WAS,John Collins,UTA,19.0,2.0,8.2,Two-Way Forwards,2.9888129313814784
+WAS,Josh Hart,NYK,13.6,5.9,9.6,Two-Way Forwards,2.9784497292183687
+WAS,Kristaps Porziņģis,BOS,19.5,2.1,6.8,Two-Way Forwards,2.907044674114152
+WAS,Jimmy Butler III,GSW,17.5,5.4,5.4,Two-Way Forwards,2.897310272851264
