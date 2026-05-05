@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NBA Player Clustering | NAU CS472</title>
+  <title>NBA Player Clustering | Unsupervised Machine Learning</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -21,7 +21,7 @@
   <!-- header -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-tag">NAU CS472 · Machine Learning · 2024–25 Season</div>
+      <div class="hero-tag">NBA Clustering · Unsupervised Machine Learning · 2024–25 Season</div>
       <h1>Clustering<br><em>NBA</em><br>Archetypes</h1>
       <p class="hero-desc">
         We used a Gaussian Mixture Model to soft-assign 322 NBA players into
@@ -184,6 +184,21 @@
       </div>
     </div>
 
+    <div class="model-images">
+      <figure>
+        <img src="/Graphs/k_selection_gmm.png" alt="BIC/AIC model selection chart" />
+        <figcaption>BIC & AIC scores across cluster counts (k = 3 – 10) with a
+          silhouette score calculation as a sanity-check
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="/Graphs/nba_clusters_gmm_pca.png" alt="PCA cluster visualization" />
+        <figcaption>PCA projection of the 9 GMM clusters across 26 features. Reduced
+          to 2 PCA components for visualization.
+        </figcaption>
+      </figure>
+    </div>
+
     <hr class="divider" />
 
     <!-- other pages -->
@@ -211,8 +226,12 @@
   </main>
 
   <footer>
-    NAU CS472 · NBA Player Clustering · 2024-25 Season ·
+    Unsupervised Machine Learning · NBA Player Clustering · 2024-25 Season ·
     <a href="https://github.com/dr3w-mg/CS472-NBA-Clustering" target="_blank">GitHub Repo ↗</a>
+    <div class="footer-names">
+      <a href="https://www.linkedin.com/in/tate-whittaker-1885393a6/" target="_blank">Tate Whittaker ↗</a>
+      <a href="https://www.linkedin.com/in/andrew-gajewski-2046b8279/" target="_blank">Andrew Gajewski ↗</a>
+    </div>
   </footer>
 
 </body>
